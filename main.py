@@ -3,8 +3,23 @@ from drafter import *
 from dataclasses import dataclass
 
 from meta import *
-from state import State
 
+# hide_debug_information()
+# set_website_framed(False)
+set_website_title("Your Drafter Website")
+set_site_information(
+    "author",
+    """
+Your description can go here.
+""",
+    [],
+    [],
+    [],
+)
+
+@dataclass
+class State:
+    pass
 
 @route
 def index(state: State) -> Page:
